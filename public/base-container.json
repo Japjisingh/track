@@ -1,1 +1,35 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2025-04-14T12:00:00Z",
+  "containerVersion": {
+    "container": {
+      "publicId": "GTM-XXXXXX",
+      "name": "Pixel Tracker Container",
+      "usageContext": ["WEB"]
+    },
+    "tag": [],
+    "trigger": [
+      {
+        "name": "All Pages",
+        "type": "PAGEVIEW",
+        "triggerId": "2147479553"
+      }
+    ],
+    "variable": [],
+    "builtInVariable": [
+      {
+        "type": "PAGE_URL",
+        "name": "Page URL"
+      },
+      {
+        "type": "PAGE_PATH",
+        "name": "Page Path"
+      },
+      {
+        "type": "REFERRER",
+        "name": "Referrer"
+      }
+    ]
+  }
+}
 
