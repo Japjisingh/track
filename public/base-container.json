@@ -4,7 +4,7 @@
   "containerVersion": {
     "container": {
       "publicId": "GTM-XXXXXX",
-      "name": "Pixel Tracker Container",
+      "name": "Pixel Tag Container",
       "usageContext": ["WEB"]
     },
     "tag": [],
@@ -17,18 +17,9 @@
     ],
     "variable": [],
     "builtInVariable": [
-      {
-        "type": "PAGE_URL",
-        "name": "Page URL"
-      },
-      {
-        "type": "PAGE_PATH",
-        "name": "Page Path"
-      },
-      {
-        "type": "REFERRER",
-        "name": "Referrer"
-      }
+      { "type": "PAGE_URL", "name": "Page URL" },
+      { "type": "PAGE_PATH", "name": "Page Path" },
+      { "type": "REFERRER", "name": "Referrer" }
     ]
   }
 }
