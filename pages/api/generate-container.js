@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -14,11 +14,9 @@ export default async function handler(req, res) {
     tiktokPixel
   } = req.body;
 
-  // Load a base GTM container template (you can refine it later)
   const templatePath = path.join(process.cwd(), 'public', 'base-container.json');
   const template = JSON.parse(fs.readFileSync(templatePath, 'utf-8'));
 
-  // Inject custom pixel values
   const variables = [
     {
       name: "Google Ads Measurement ID",
@@ -50,7 +48,6 @@ export default async function handler(req, res) {
   template.containerVersion.variable.push(...variables);
 
   const containerJSON = JSON.stringify(template, null, 2);
-
   res.setHeader('Content-Disposition', 'attachment; filename=\"GTM-Container.json\"');
   res.setHeader('Content-Type', 'application/json');
   res.status(200).send(containerJSON);
